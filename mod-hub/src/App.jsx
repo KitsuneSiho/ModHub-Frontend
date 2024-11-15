@@ -1,28 +1,29 @@
-import {useEffect, useState} from "react";
-import axios from "axios";
-
-const api = axios.create({
-  baseURL: 'http://localhost:8080'  // Spring Boot 서버 주소
-});
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Users from './pages/Users'
+import './App.css'
 
 function App() {
-    const [hello, setHello] = useState('');
+  return (
+    <BrowserRouter>
+      <div>
+        <nav>
+          <ul>\
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/users">Users</Link></li>
+          </ul>
+        </nav>
 
-    useEffect(() => {
-        api.get('/api/test')
-            .then((res) => {
-                setHello(res.data);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-    }, []);
-
-    return (
-        <div className="App">
-            백엔드 데이터 : {hello}
-        </div>
-    );
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/users" element={<Users />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
