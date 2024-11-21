@@ -1,8 +1,8 @@
 const About = () => {
     return (
       <div>
-        <h1>모드세임서버입니다</h1>
-        <p>This is the about page</p>
+        <h1>지원 게임목록</h1>
+        <p>지원 예정</p>
       </div>
     )
   }

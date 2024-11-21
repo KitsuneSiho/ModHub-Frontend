@@ -1,0 +1,23 @@
+body {
+  padding-top: 40px;
+}
+.navbar {
+    height: 40px !important;  /* 기본 높이의 절반 정도로 설정 */
+    min-height: 40px !important;
+  }
+  
+  .navbar-nav {
+    align-items: center;  /* 세로 중앙 정렬 */
+  }
+  
+  .nav-link {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 40px;  /* navbar 높이와 동일하게 설정 */
+  }
+  
+  .navbar-brand {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 40px;  /* navbar 높이와 동일하게 설정 */
+  }

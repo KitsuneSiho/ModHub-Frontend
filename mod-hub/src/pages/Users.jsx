@@ -16,7 +16,7 @@ const Users = () => {
 
   return (
     <div>
-      <h1>Users Page</h1>
+      <h1>개발자들</h1>
       <ul>
         {users.map(user => (
           <li key={user.id}>{user.name}</li>
